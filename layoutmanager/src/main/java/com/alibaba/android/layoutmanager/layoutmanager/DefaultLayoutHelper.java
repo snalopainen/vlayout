@@ -22,5 +22,23 @@
  * SOFTWARE.
  */
 
-include ':layoutmanager'
-include ':examples'
+package com.alibaba.android.layoutmanager.layoutmanager;
+
+import com.alibaba.android.layoutmanager.LayoutHelper;
+
+/**
+ * Created by villadora on 15/8/12.
+ */
+public class DefaultLayoutHelper extends LinearLayoutHelper {
+
+    public static LayoutHelper newHelper(int itemCount) {
+        DefaultLayoutHelper helper = new DefaultLayoutHelper();
+        helper.setItemCount(itemCount);
+        return helper;
+    }
+
+    @Override
+    public boolean isOutOfRange(int position) {
+        return false;
+    }
+}

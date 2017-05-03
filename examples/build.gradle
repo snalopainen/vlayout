@@ -45,11 +45,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '25.0.0'
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':vlayout')
+    compile project(':layoutmanager')
     compile 'com.crittercism.dexmaker:dexmaker:1.4'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:appcompat-v7:21.0.0'
